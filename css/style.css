@@ -1,0 +1,228 @@
+/* DEBUG */
+
+.debug {
+	background-color: lightskyblue;
+	min-height: 80px;
+	line-height: 80px;
+	border: 2px dashed black;
+}
+
+body {
+	background-color: lightblue;
+}
+
+/* HEADER */
+
+header {
+	background-color: skyblue;
+}
+
+.hamburger-menu {
+	display: none;
+}
+
+header>nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+header>nav>ul {
+	list-style: none;
+}
+
+header>nav>ul>li {
+	display: inline-block;
+}
+
+/* CARDS */
+
+#cards {
+	margin: 50px 0;
+}
+
+#cards .cards>.row {
+	display: flex;
+	flex-wrap: wrap;
+	/* gap: 15px; */
+}
+
+#cards .card {
+	width: calc(100% / 3);
+	padding: 15px;
+
+	border: 1px solid red;
+}
+
+#cards .card:first-child {
+	width: calc(100% / 3 * 2);
+	display: flex;
+	padding: 0;
+}
+
+/* PLANNING */
+
+#planning {
+	background-color: violet;
+	padding: 50px 0;
+}
+
+.planning-image {
+	margin-bottom: 100px;
+}
+
+#planning .card {
+	width: 100%;
+	margin: 30px;
+	padding: 30px;
+	background-color: white;
+}
+
+/* TESTIMONIAL */
+#testimonials {
+	margin: 80px 0;
+}
+
+#testimonials .card {
+	margin: 50px 0;
+	background-color: blueviolet;
+	display: flex;
+}
+
+#testimonials .card .card-image {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+#testimonials .card .card-contents {
+	flex-grow: 1;
+}
+
+/* BENEFITS */
+#benefits {
+	margin: 50px 0;
+}
+
+#benefits .cards>.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#benefits .card {
+	width: calc(100% / 3);
+	padding: 15px;
+}
+
+
+/* TABLET */
+
+@media screen and (max-width: 992px) {
+	body {
+		background-color: lightgreen;
+	}
+
+	.container {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	/* HEADER */
+
+	.links {
+		display: none;
+	}
+
+	.hamburger-menu {
+		display: block;
+	}
+
+	/* CARDS */
+
+	#cards .card:first-child {
+		display: block;
+	}
+
+	#cards .card:first-child>.col-50 {
+		width: 100%;
+	}
+
+	/* PLANNING  */
+
+	#planning>.container>.row {
+		flex-wrap: wrap;
+	}
+
+	#planning>.container>.row>.col-40 {
+		width: 100%;
+	}
+
+	#planning .card {
+		margin: 30px 0;
+	}
+
+	/* BENEFITS */
+
+	#benefits .card {
+		width: 50%;
+	}
+
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 600px) {
+	body {
+		background-color: coral;
+	}
+
+	.container {
+		max-width: 450px;
+		margin: 0 auto;
+	}
+
+	/* CARDS */
+
+	#cards .card {
+		width: 100%;
+	}
+
+	#cards .card:first-child {
+		width: 100%;
+	}
+
+	/* TESTIMONIALS */
+
+	#testimonials .card {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	#testimonials .card .card-image {
+		width: 50vw;
+		height: 50vw;
+		margin: 15px 0;
+	}
+
+	#testimonials .card .card-contents {
+		width: 100%;
+	}
+
+	/* BENEFITS */
+
+	#benefits .card {
+		width: 100%;
+	}
+
+	/* ABOUT */
+
+	#about>.container>.row {
+		flex-wrap: wrap;
+	}
+
+	#about>.container>.row>.col-70,
+	#about>.container>.row>.col-30 {
+		width: 100%;
+	}
+
+}
